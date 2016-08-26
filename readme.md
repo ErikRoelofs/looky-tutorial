@@ -1,6 +1,6 @@
 ==TUTORIAL==
 
-In this tutorial, we are going to make a very simple "game" where you can fly a spaceship around a field of stars. The guide assumes you already are somewhat familiar with löve and have Looky installed.
+In this tutorial, we are going to make a very simple "game" where you can fly a spaceship around a field of stars. The guide assumes you already are somewhat familiar with löve and have Looky installed. If you get stuck, you can refer to the "working_main.lua" file, which contains a working version of this tutorial. To install Looky, visit the repository on github: https://github.com/ErikRoelofs/looky
 
 First, we are going to setup the basic layout that we will use. It will consist of a few components that we want to identify:
 
