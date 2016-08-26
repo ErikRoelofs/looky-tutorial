@@ -2,19 +2,19 @@ function love.load()
 
   looky = require("looky")
 
-  looky:registerFont( "space", love.graphics.newFont( "docs/assets/Roboto-Bold.ttf", 30 ))
+  looky:registerFont( "space", love.graphics.newFont( "fonts/Roboto-Bold.ttf", 30 ))
   looky:registerStyledLayout("new.text", "text", { font = "space", gravity = { "center", "center" }, textColor = { 180, 180, 60, 255 } })
   
-  looky:registerFont( "small", love.graphics.newFont( "docs/assets/Roboto-Bold.ttf", 10))    
+  looky:registerFont( "small", love.graphics.newFont( "fonts/Roboto-Bold.ttf", 10))    
   looky:registerStyledLayout( "new.text.label", "new.text", { font = "small" })
   
-  lightOff = love.graphics.newImage("docs/assets/light_off.png")
-  lightOn = love.graphics.newImage("docs/assets/light_on.png")
+  lightOff = love.graphics.newImage("images/light_off.png")
+  lightOn = love.graphics.newImage("images/light_on.png")
 
   speedGaugeType = {
     build = function(options)
       local mainContainerView = looky:build("linear", { width = "fill", height = "fill", direction = "h" })
-      mainContainerView:addChild( looky:build( "image", { width = "wrap", height = "wrap", file = "docs/assets/speedometer.png" }))
+      mainContainerView:addChild( looky:build( "image", { width = "wrap", height = "wrap", file = "images/speedometer.png" }))
       local secondContainerView = looky:build("linear", { width = "fill", height = "fill", direction = "v" })
       secondContainerView:addChild( looky:build("new.text", { width = "fill", height = "fill", data = function() return "Speed:" end }))
       local speedView = looky:build("numberAsBar", { width = "fill", height = 40, gravity = { "center", "center" }, value = function() return player.speed end, maxValue = player.maxSpeed, filledColor = { 100, 150, 30, 255 }, background = { 40, 40, 45, 255 }, padding = looky.padding(5), notches = { amount = 4, color = { 255, 255, 255, 255 }, height = 0.4 } })
@@ -66,7 +66,7 @@ function love.load()
     love.graphics.setColor(255,255,255,255)
     love.graphics.draw(shipImage, player.x, player.y, player.rotation, 1, 1, shipImage:getWidth() / 2, shipImage:getHeight() / 2)
   end
-  gameScreenView = looky:build("freeform", { width = "fill", height = "fill", render = renderGameScreen, background = { file = "docs/assets/background.png", fill = "fill" }, padding = looky.padding(5), border = { thickness = 5, color = { 60, 60, 60, 250 }  } })
+  gameScreenView = looky:build("freeform", { width = "fill", height = "fill", render = renderGameScreen, background = { file = "images/background.png", fill = "fill" }, padding = looky.padding(5), border = { thickness = 5, color = { 60, 60, 60, 250 }  } })
 
   HUDView = looky:build("linear", { width = "fill", height = 100, direction = "h", background = { 20, 20, 20, 255 } })
 
@@ -84,7 +84,7 @@ function love.load()
   isSpeeding = false
   nearEdge = false
   
-  shipImage = love.graphics.newImage("docs/assets/ship.png")
+  shipImage = love.graphics.newImage("images/ship.png")
 
   speedView = looky:build("speedGauge")
 
