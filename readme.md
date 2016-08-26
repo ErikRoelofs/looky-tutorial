@@ -306,3 +306,5 @@ Here's the code for the edge detector. It works roughly the same way; some love 
 We use the actual assigned size to the gameScreenView (minus the borders) so that it works for any size of screen.
 
 This is where I'm going to leave off. I hope you have a basic idea of the idea behind Looky and how you can use it to set up your game's layout. In case you get stuck with the tutorial, you can always download the complete project from my github: 
+
+With a thank-you to Sujit Yada for supplying the art pack that contained the ship sprite (http://unluckystudio.com/game-art-giveaway-3-sci-fi-spaceship-game-sprites-pack/)
